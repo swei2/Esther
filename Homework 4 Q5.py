@@ -1,0 +1,6 @@
+print("Enter scores of the top 4 team members")
+a = float(input("Enter score of team member1: "))
+b = float(input("Enter score of team member2: "))
+c = float(input("Enter score of team member3: "))
+d = float(input("Enter score of team member4: "))
+print("Top score is:" ,max(a,b,c,d))
