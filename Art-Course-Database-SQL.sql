@@ -1,24 +1,3 @@
-/******************************************************************************/
-/*																				                                    */
-/*	Kroenke, Auer, Vandenberg, and Yoder			*/
-/*	Database Concepts (8th Edition) Chapter 01		         	*/
-/*															                                      			  */
-/*  Art_Course_Database Queries													                      */
-/*																				                                    */
-/*	These are the Oracle Database XE SQL code solutions	     		        	*/
-/*																				                                    */
-/******************************************************************************/
-
-/*****   Art Course Database CREATE TABLE statements   *******************************/
-
-/*       See the files:	 DBC-e08-ODB-Art-Course-Database-Create-Tables.sql  	*/
-
-/*****   Art Course Database INSERT statements   *************************************/
-
-/*       See the files:	 DBC-e08-ODB-Art-Course-Database-Insert-Data.sql		  */
-
-/*****   CUSTOMER DATA   ******************************************************/
-
 SELECT * FROM CUSTOMER;
 
 /*****   COURSE DATA   ********************************************************/
@@ -29,7 +8,7 @@ SELECT * FROM COURSE;
 
 SELECT * FROM ENROLLMENT;
 
-/*****   Art Course List Query [Figure 1-15]   ********************************/
+/*****   Art Course List Query */
 
 SELECT	 CUSTOMER.CustomerLastName,
          CUSTOMER.CustomerFirstName, CUSTOMER.Phone,
@@ -39,7 +18,7 @@ FROM	   CUSTOMER, ENROLLMENT, COURSE
 WHERE	   CUSTOMER.CustomerNumber=ENROLLMENT.CustomerNumber
 	 AND   COURSE.CourseNumber=ENROLLMENT.CourseNumber;
 
-/*****   Amount Due Query [Figure 1-16]   *************************************/
+/*****   Amount Due Query */
 
 SELECT	 CUSTOMER.CustomerLastName,
          CUSTOMER.CustomerFirstName,CUSTOMER.Phone,
@@ -52,7 +31,7 @@ FROM	   CUSTOMER JOIN ENROLLMENT
 WHERE    (COURSE.Fee - ENROLLMENT.AmountPaid)>0
 ORDER BY CUSTOMER.CustomerLastName;
 
-/*****   Course Parameter Query [Figure 1-23]   *******************************/
+/*****   Course Parameter Query */
 
 SELECT	 CUSTOMER.CustomerLastName,
          CUSTOMER.CustomerFirstName,
@@ -62,9 +41,6 @@ FROM	   CUSTOMER, ENROLLMENT, COURSE
 WHERE	   CUSTOMER.CustomerNumber=ENROLLMENT.CustomerNumber
 	 AND   COURSE.CourseNumber=ENROLLMENT.CourseNumber
 	AND COURSE.Course LIKE '%&EnterPartOfCourseName%';
-
-
-/******************************************************************************/
 
 
 
