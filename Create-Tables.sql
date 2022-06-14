@@ -1,14 +1,3 @@
-/****************************************************************************/
-/*																			*/
-/*	Kroenke, Auer, Vandenberg, and Yoder 					*/
-/*	Database Concepts (8th Edition) Chapter 03 	       		*/
-/*																			*/
-/*	James River Jewelry Database Create Tables								*/
-/*																			*/
-/*	These are the Oracle Express 11g R2 SQL code solutions			*/
-/*																			*/
-/****************************************************************************/
-
 CREATE TABLE CUSTOMER(
 	CustomerID			Int				NOT NULL,
 	LastName			Char(35)			NOT NULL,
@@ -57,5 +46,3 @@ CREATE TABLE PURCHASE_ITEM (
 	CONSTRAINT			PURCHASE_ITEM_ITEM_FK  FOREIGN KEY (ItemNumber)
 								REFERENCES ITEM(ItemNumber)
 	);
-
-/********************************************************************/
