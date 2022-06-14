@@ -1,14 +1,3 @@
-/******************************************************************************/
-/*																			                                      */
-/*	Kroenke, Auer, Vandenberg, and Yoder 					*/
-/*	Database Concepts (8th Edition) Chapter 03 	       		*/
-/*																			                                      */
-/*	Pet-Database Create Tables												                        */
-/*																			                                      */
-/*	These are the Oracle Express Database 11g R2 SQL code solutions	                    */
-/*																			                                      */
-/******************************************************************************/
-
 CREATE TABLE PET_OWNER(
 	OwnerID					        Int				      NOT NULL,
 	OwnerLastName			      Char(25)		    NOT NULL,
@@ -70,8 +59,3 @@ ALTER TABLE PET_3
 		REFERENCES BREED(BreedName)
 		/* 	ON UPDATE CASCADE not supported by Oracle and
 		therefore omitted; can be done with triggers */ ;
-
-
-
-
-/********************************************************************************/
